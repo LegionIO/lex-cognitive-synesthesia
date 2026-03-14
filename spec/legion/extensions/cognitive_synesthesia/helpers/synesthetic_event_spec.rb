@@ -69,7 +69,7 @@ RSpec.describe Legion::Extensions::CognitiveSynesthesia::Helpers::SynestheticEve
     it 'includes all expected keys' do
       h = event.to_h
       expect(h).to include(:id, :mapping_id, :source_input, :target_output,
-                            :intensity, :intensity_label, :involuntary, :triggered_at)
+                           :intensity, :intensity_label, :involuntary, :triggered_at)
     end
 
     it 'reflects correct intensity' do

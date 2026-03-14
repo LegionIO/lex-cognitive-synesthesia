@@ -167,10 +167,10 @@ RSpec.describe Legion::Extensions::CognitiveSynesthesia::Helpers::SynesthesiaEng
 
     it 'increases as more unique pairs are added' do
       register(source: :auditory, target: :visual, strength: 0.6)
-      richness_1 = engine.cross_modal_richness
+      richness_before = engine.cross_modal_richness
       register(source: :tactile, target: :emotional, strength: 0.6)
-      richness_2 = engine.cross_modal_richness
-      expect(richness_2).to be >= richness_1
+      richness_after = engine.cross_modal_richness
+      expect(richness_after).to be >= richness_before
     end
   end
 
@@ -183,7 +183,7 @@ RSpec.describe Legion::Extensions::CognitiveSynesthesia::Helpers::SynesthesiaEng
       register(source: :auditory, target: :visual, strength: 0.6)
       3.times { engine.trigger(source_modality: :auditory, input: {}) }
       register(source: :tactile, target: :emotional, strength: 0.6)
-      1.times { engine.trigger(source_modality: :tactile, input: {}) }
+      engine.trigger(source_modality: :tactile, input: {})
 
       pairs = engine.dominant_modality_pairs
       expect(pairs.first[:pair]).to eq('auditory->visual')

@@ -28,14 +28,14 @@ module Legion
 
           def to_h
             {
-              id:            @id,
-              mapping_id:    @mapping_id,
-              source_input:  @source_input,
-              target_output: @target_output,
-              intensity:     @intensity,
+              id:              @id,
+              mapping_id:      @mapping_id,
+              source_input:    @source_input,
+              target_output:   @target_output,
+              intensity:       @intensity,
               intensity_label: intensity_label,
-              involuntary:   @involuntary,
-              triggered_at:  @triggered_at
+              involuntary:     @involuntary,
+              triggered_at:    @triggered_at
             }
           end
         end

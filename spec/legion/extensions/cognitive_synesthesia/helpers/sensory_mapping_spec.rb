@@ -121,8 +121,8 @@ RSpec.describe Legion::Extensions::CognitiveSynesthesia::Helpers::SensoryMapping
     it 'includes all expected keys' do
       h = mapping.to_h
       expect(h).to include(:id, :source_modality, :target_modality, :trigger_pattern,
-                            :response_pattern, :strength, :activation_count, :strength_label,
-                            :active, :created_at, :last_activated_at)
+                           :response_pattern, :strength, :activation_count, :strength_label,
+                           :active, :created_at, :last_activated_at)
     end
 
     it 'reflects activation state after activate!' do

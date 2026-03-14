@@ -67,7 +67,7 @@ RSpec.describe Legion::Extensions::CognitiveSynesthesia::Runners::CognitiveSynes
     it 'uses injected engine' do
       engine = Legion::Extensions::CognitiveSynesthesia::Helpers::SynesthesiaEngine.new
       engine.register_mapping(source_modality: :tactile, target_modality: :emotional,
-                               trigger_pattern: {}, response_pattern: {}, strength: 0.7)
+                              trigger_pattern: {}, response_pattern: {}, strength: 0.7)
       result = client.trigger(source_modality: :tactile, input: { pressure: :soft }, engine: engine)
       expect(result[:triggered_count]).to eq(1)
     end

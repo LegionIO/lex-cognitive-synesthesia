@@ -101,13 +101,13 @@ module Legion
           def synesthesia_report(**)
             richness = cross_modal_richness
             {
-              mapping_count:          @mappings.size,
-              active_mapping_count:   @mappings.values.count(&:active?),
-              event_count:            @events.size,
-              cross_modal_richness:   richness,
-              richness_label:         Constants.label_for(RICHNESS_LABELS, richness),
+              mapping_count:           @mappings.size,
+              active_mapping_count:    @mappings.values.count(&:active?),
+              event_count:             @events.size,
+              cross_modal_richness:    richness,
+              richness_label:          Constants.label_for(RICHNESS_LABELS, richness),
               dominant_modality_pairs: dominant_modality_pairs,
-              modality_coverage:      modality_coverage
+              modality_coverage:       modality_coverage
             }
           end
 
